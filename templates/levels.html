@@ -1,6 +1,6 @@
-<div class="container">
-    <h2>المستويات الدراسية</h2>
-    <div class="item-box"><a href="/subjects">السنة الأولى ثانوي</a></div>
-    <div class="item-box"><a href="/subjects">السنة الثانية ثانوي</a></div>
-    <div class="item-box"><a href="/subjects">السنة الثالثة ثانوي</a></div>
-</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="container"><h1>اختر المستوى</h1>
+    {% for level in levels %}<a href="/streams/{{ level }}" class="box">{{ level }}</a>{% endfor %}
+</div></body></html>

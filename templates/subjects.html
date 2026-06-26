@@ -1,6 +1,6 @@
-<div class="container">
-    <h2>المواد الدراسية</h2>
-    <div class="item-box"><a href="/chapters">الرياضيات</a></div>
-    <div class="item-box"><a href="/chapters">الفيزياء</a></div>
-    <div class="item-box"><a href="/chapters">العلوم</a></div>
-</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="container"><h1>اختر المادة</h1>
+    {% for sub in subjects %}<a href="/chapters/{{ level }}/{{ stream }}/{{ sub }}" class="box">{{ sub }}</a>{% endfor %}
+</div></body></html>

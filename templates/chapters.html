@@ -1,6 +1,13 @@
-<div class="container">
-    <h2>المحور: الدوال</h2>
-    <p>السعر: 500 دج</p>
-    <a href="https://wa.me/number" style="display:block;">تواصل واتساب</a>
-    <a href="https://t.me/user" style="display:block;">تواصل تلغرام</a>
-</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="container"><h1>المحاور</h1>
+    {% for ch, pr in chapters.items() %}
+        <div class="box">
+            <h3>{{ ch }}</h3><p>السعر: {{ pr }}</p>
+            <a href="https://wa.me/213XXXXXXXXX" class="btn">واتساب</a>
+            <a href="https://t.me/yourusername" class="btn">تليجرام</a>
+        </div>
+    {% endfor %}
+    <br><a href="/levels">العودة للرئيسية</a>
+</div></body></html>

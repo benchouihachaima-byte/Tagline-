@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="container"><h1>اختر الشعبة</h1>
+    {% for stream in streams %}<a href="/subjects/{{ level }}/{{ stream }}" class="box">{{ stream }}</a>{% endfor %}
+</div></body></html>
